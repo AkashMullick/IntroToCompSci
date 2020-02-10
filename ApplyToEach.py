@@ -6,10 +6,14 @@ starting with the first one. So if test is the tuple ('I', 'am', 'a', 'test', 't
 then evaluating oddTuples on this input would return the tuple ('I', 'a', 'tuple').
 '''
 
-def oddTuples(aTup):
-    '''
-    aTup: a tuple
+def positive(a):
+    return abs(a)
+applyToEach(testList, positive)
 
-    returns: tuple, every other element of aTup.
-    '''
-    return aTup[::2]
+def addOne(a):
+    return a + 1
+applyToEach(testList, addOne)
+
+def square(a):
+    return a**2
+applyToEach(testList, square)

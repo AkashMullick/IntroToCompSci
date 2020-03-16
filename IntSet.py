@@ -44,7 +44,7 @@ class intSet(object):
         return intersection
 
     def __len__(self):
-        return len(self.values)
+        return len(self.vals)
 
     def __str__(self):
         """Returns a string representation of self"""

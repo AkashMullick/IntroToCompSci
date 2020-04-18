@@ -1,15 +1,22 @@
-def FancyDivide(numbers,index):
-    try:
-        denom = numbers[index]
-        for i in range(len(numbers)):
-            numbers[i] /= denom
-    except IndexError:
-        print("-1")
-    else:
-        print("1")
-    finally:
-        print("0")
+import pandas as pd
 
-# FancyDivide([0, 2, 4], 1)
-# FancyDivide([0, 2, 4], 4)
-FancyDivide([0, 2, 4], 0)
+pd.options.display.html.table_schema = True
+pd.options.display.max_rows = None
+
+
+iris_url = "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
+
+df1 = pd.read_csv(iris_url)
+
+df1
+
+import matplotlib
+matplotlib.use('Qt5Agg')
+# This should be done before `import matplotlib.pyplot`
+# 'Qt4Agg' for PyQt4 or PySide, 'Qt5Agg' for PyQt5
+import matplotlib.pyplot as plt
+import numpy as np
+
+t = np.linspace(0, 20, 500)
+plt.plot(t, np.sin(t))
+plt.show()
